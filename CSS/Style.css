@@ -78,6 +78,8 @@ article { display: block; width: 100%; float: left; }
 
 article > h2 > p { line-height:1.2; text-align:left; margin-bottom:1em; color: #444;}
 
+article > ul > li { line-height:1.6; }
+
 
 .facilities-column-left { width: 49%; float: left; margin-right: 1%; }
 
