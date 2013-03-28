@@ -38,7 +38,7 @@
             <div class="navigation">
                 <ul>
                     <li>
-                        <a id="current" href="home.html">
+                        <a id="current" href="Home.html">
                             <span>Home</span>
                         </a>
                     </li>
@@ -118,8 +118,12 @@
             <div class="content-article">
                 <div id="content-zone">
                 </div>
-            </div>
 
+            </div>
+            <div class="footer">
+                <div class="footer-location">500 East Choctaw, Chickasha, OK 73018.  405-224-2031</div>
+                <div class="footer-copyright">Copyright © Grady County Fairgrounds <span id="currentyear"></span></div>
+            </div>
         </div>
     </div>
 </body>
@@ -132,6 +136,9 @@
         var $headerTextlogo = $('.header-text-logo');
         var $contentZone = $('#content-zone');
 
+        var $footerLocation = $('.footer-location');
+        var $footerCopyright = $('.footer-copyright');
+
         var $navigation = $('.navigation');
 
         $headerGradylogoRibbon.css({
@@ -139,7 +146,10 @@
             'top': '0px'
         })
 
-        $.get('content/home.html', null, null, 'html').done(function (response, message, xhr) {
+        $("#currentyear").html((new Date).getFullYear());
+
+
+        $.get('content/Home.html', null, null, 'html').done(function (response, message, xhr) {
             $contentZone.html(response)
         });
 
